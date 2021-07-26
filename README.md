@@ -6,12 +6,14 @@
 
 ## Responsividade Aplicada.
 
-<p align ="center">
-    <img width="187" height="300" src="images/itens.png">
-</p>
+<div>
+    <p align ="center">
+        <img width="187" height="300" src="images/itens.png">
+    </p>
 
-<p align ="center">
-    <img width="187" height="300" src="images/telaInicial.png">
-</p>
+    <p align ="center">
+        <img width="187" height="300" src="images/telaInicial.png">
+    </p>
+</div>
 
 
