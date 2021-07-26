@@ -7,13 +7,13 @@
 ## Responsividade Aplicada.
 
    <p align ="center">
-      <img width="187" height="300" src="images/telaInicial.png">
+      <img width="177" height="290" src="images/telaInicial.png">
    </p>
    
-   ## Possibilidade de realizar CRUD na propia imagem do item do Produto ! 
+   ### Possibilidade de realizar CRUD na propia imagem do item do Produto ! 
    
    <p align ="center">
-     <img width="187" height="300" src="images/itens.png">
+     <img width="177" height="290" src="images/itens.png">
    </p>
 
 
