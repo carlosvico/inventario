@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/myStyle.css">
+    
+    <script>
+        function chama(){
+
+           let nome = document.getElementById('nCliente').value
+           let rua = document.getElementById('rCliente').value
+           let bairro = document.getElementById('bCliente').value
+           let email = document.getElementById('eCliente').value
+           let telefone = document.getElementById('tCliente').value
+
+           let dados = {
+               nome,
+               rua,
+               bairro,
+               email,
+               telefone
+           }
+
+           let converteDado = JSON.stringify(dados);
+           localStorage.setItem('Clientes', converteDado)
+
+
+            // console.log(nome,rua,bairro,email,telefone);
+            
+        } 
+        
+    </script>
+    </head>
+    
+    <body>
+        
+        <section id="mainHeader">
+            <div class="my-Container m-auto">
+                <nav class="navbar navbar-expand-lg text-dark navbar-light bg-light my-5 p-3">
+                    <div class="container">
+                        <a class="navbar-brand myTextColor myText" href="index.html">Cadastro Cliente</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link activeLink" href="index.html">Home</a>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Produtos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="addProduct.html">Adicionar produtos</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clientes.html">Cadastrar Clientes</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+        <div class="col-md-8">
+            <div class="clientes">
+                <div class="alert alert-primary myContactAlert" role="alert">
+                    Cadastro Realizado !
+                </div>
+                <div class="clientes">
+                    <div class="alert alert-danger myContactdangerAlert" role="alert">
+                        Existem Campos vazios no Formulário!
+                    </div>
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="userInputName"></label>Nome</label>
+                            <input id="nCliente" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ruaCliente"></label>Rua</label>
+                            <input id="rCliente" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bairroCliente"></label>Bairro</label>
+                            <input id="bCliente" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input id="eCliente" type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="tCliente" class="input-padrao" required placeholder="(xx) xxxxx-xxxx">
+                        </div>
+                        
+                    </form>
+                    <button onclick="chama()" type="submit" class="btn btn-primary btnContact">Enviar</button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <script>
+        
+        var nCliente = document.getElementById('nCliente');
+        var rCliente = document.getElementById('rCliente');
+        var bCliente = document.getElementById('bCliente');
+        var eCliente = document.getElementById('eCliente');
+        var tCliente = document.getElementById('tCliente');
+        var myContactAlert = document.querySelector('.myContactAlert');
+        var myContactdangerAlert = document.querySelector('.myContactdangerAlert');
+        var btnContact = document.querySelector('.btnContact');
+        
+        btnContact.addEventListener('click', function () {
+            if (nCliente.value == '' || rCliente.value == '' || bCliente.value == '' || eCliente.value == '' || tCliente.value == '') {
+                $(myContactdangerAlert).fadeIn(1500);
+            } else {
+                $(myContactdangerAlert).fadeOut(100);
+                $(myContactAlert).fadeIn(1500, function () {
+                    $(myContactAlert).fadeOut(2000);
+                });
+            }
+        })
+        </script>
+   
+  
+   <script src="js/jquery-3.4.1.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   
+</body>
+
+</html>
+
+
+
+<!-- netlify -->
