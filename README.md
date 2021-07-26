@@ -10,7 +10,7 @@
       <img width="177" height="290" src="images/telaInicial.png">
    </p>
    
-   ### Possibilidade de realizar CRUD na propia imagem do item do Produto ! 
+   ### Possibilidade de realizar CRUD na propia imagem do item ! 
    
    <p align ="center">
      <img width="177" height="290" src="images/itens.png">
