@@ -1,8 +1,8 @@
 # Inventario - Desafio #2 Hiring Coders
 ## Projeto de cadastro de produtos e clientes.
 - [x] Armazenamento no localstorage.
-- [x] Tela inicial com opções para ir diretamente à tela de cadastro, ou visualizar itens cadastrados;
-- [x] NavBar com mais opções para navegar por toda extrutura do Site;
+- [x] Tela inicial com opções para navegação entre as telas de cadastro ou visualizar itens cadastrados;
+- [x] NavBar com mais opções para navegar pela extrutura do Site;
 
 ## Responsividade Aplicada.
 
